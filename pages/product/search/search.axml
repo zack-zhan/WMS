@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="search">
+    <view class="search_box">
+      <icon type="search" class="icon" size="16"></icon>
+      <input value="{{search}}" onInput="setSearch" placeholder="名称" />
+      <image mode="scaleToFill" src="../../../images/clear.png" onTap="clear" a:if="{{search}}"/>
+    </view>
+  </view>
+
+  <view class="line" a:for="{{list}}" :key="{{index}}" data-index="{{index}}" onTap="select">
+    <view>
+      <text>{{item.name}}</text>
+      <image mode="scaleToFill" src="../../../images/yes.png" a:if="{{select.id === item.id}}"/>
+    </view>
+  </view>
+
+  <view class="add" a:if="{{btnVisible}}">
+    <button type="primary" class="btn" onTap="confirm">确定</button>
+  </view>
+</view>

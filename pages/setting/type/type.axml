@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="title" a:if="{{list.length > 0}}">已有类型 {{list.length}}</view>
+  <view class="line" a:for="{{list}}" :key="item">
+    <text>{{item.value}}</text>
+    <image mode="scaleToFill" src="../../../images/clear.png" data-id="{{item.id}}" onTap="del" />
+  </view>
+
+  <block a:for="{{addArr}}" a:key="*this">
+    <view class="title">{{index === 0?'新增类型':''}}<text data-index="{{index}}" onTap="delAdd">删除</text>
+    </view>
+    <view class="line">
+      <text>类型{{index + 1}}</text>
+      <input data-index="{{index}}" value="{{item.value}}" onInput="setTypeName" placeholder="请填写类型" />
+    </view>
+  </block>
+  <view class="add" onTap="add">＋ 新增类型</view>
+
+  <view class="save" a:if="{{btnVisible}}">
+    <button type="primary" class="btn" onTap="save">保存</button>
+  </view>
+</view>

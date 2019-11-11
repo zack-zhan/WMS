@@ -1,0 +1,79 @@
+<view class="container">
+  <view class="header" a:if="{{id !== '2'}}">
+    <view>
+      <text>开始日期</text>
+      <text onTap="slectStartDate">
+        {{startDate}}
+        <image class="icon" mode="scaleToFill" src="../../../images/right.png"/>
+      </text>
+    </view>
+    <view>
+      <text>结束日期</text>
+      <text onTap="slectEndDate">
+        {{endDate}}
+        <image class="icon" mode="scaleToFill" src="../../../images/right.png"/>
+      </text>
+    </view>
+    <view>
+      <text>时长(天)</text>
+      <text>{{data.days}}</text>
+    </view>
+  </view>
+  <view class="footer" a:if="{{data.days || id === '2'}}">
+    <view class="box">
+      <view class="row" a:if="{{id !== '2'}}">
+        <view>统计天数</view>
+        <view>{{data.days}}</view>
+      </view>
+      <view class="row" a:if="{{id !== '5' && id !== '6'}}">
+        <view>货品种类</view>
+        <view>{{data.kinds}}</view>
+      </view>
+      <view class="row" a:if="{{id === '1' || id === '2'}}">
+        <view>货品数量</view>
+        <view>{{data.count}}</view>
+      </view>
+      <view class="row" a:if="{{id === '2'}}">
+        <view>库存数量</view>
+        <view>{{data.inventory}}</view>
+      </view>
+      <view class="row" a:if="{{id === '2'}}">
+        <view>库存不足</view>
+        <view>{{data.warning}}</view>
+      </view>
+      <view class="row" a:if="{{id === '3'}}">
+        <view>入库数量</view>
+        <view>{{data.count}}</view>
+      </view>
+      <view class="row" a:if="{{id === '4'}}">
+        <view>出库数量</view>
+        <view>{{data.count}}</view>
+      </view>
+      <view class="row" a:if="{{id === '3' || id === '4'}}">
+        <view>金额</view>
+        <view a:if="{{data.money}}">{{'￥' + data.money}}</view>
+        <view a:else></view>
+      </view>
+      <block a:if="{{id === '5'}}">
+        <view class="row">
+          <view>供应商种类</view>
+          <view>{{data.kinds}}</view>
+        </view>
+        <view class="row">
+          <view>供应商数量</view>
+          <view>{{data.count}}</view>
+        </view>
+      </block>
+      <block a:if="{{id === '6'}}">
+        <view class="row">
+          <view>客户种类</view>
+          <view>{{data.kinds}}</view>
+        </view>
+        <view class="row">
+          <view>客户数量</view>
+          <view>{{data.count}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

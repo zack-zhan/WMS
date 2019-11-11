@@ -1,0 +1,105 @@
+.container{
+  width: 100%;
+  min-height: 100vh;
+  background: #f3f4f6;
+  padding-top: 28rpx;
+  box-sizing: border-box;
+}
+
+.line{
+  height: 40rpx;
+  background: #fff;
+  padding: 28rpx 32rpx;
+  position: relative;
+  margin-bottom: 28rpx;
+}
+.line > text{
+  width: 178rpx;
+  position: absolute;
+  top: 28rpx;
+  left: 32rpx;
+  height: 42rpx;
+  line-height: 42rpx;
+  font-size:32rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(25,31,37,1);
+}
+.line > input{
+  width: 500rpx;
+  position: absolute;
+  top: 28rpx;
+  left: 220rpx;
+  padding: 0;
+  height: 42rpx;
+  line-height: 42rpx;
+  font-size:32rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  text-align: right;
+}
+.line .picker{
+  width: 500rpx;
+  position: absolute;
+  top: 28rpx;
+  left: 220rpx;
+  padding: 0;
+  height: 42rpx;
+  line-height: 42rpx;
+  font-size:32rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  text-align: right;
+}
+.picker input{
+  margin-right: 36rpx; 
+  padding: 0;
+}
+input [disabled]{
+  font-size:32rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:#000;
+  opacity:1 !important;
+}
+.line image{
+  position: absolute;
+  top: 36rpx;
+  right: 32rpx;
+}
+.line .icon1{
+  width: 18rpx;
+  height: 28rpx;
+}
+.line .icon2{
+  width: 28rpx;
+  height: 28rpx;
+}
+.text{
+  background: #fff;
+  padding: 28rpx 32rpx;
+}
+.text view{
+  font-size:32rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(25,31,37,1);
+}
+.text textarea{
+  padding-left: 0;
+}
+
+.save{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+}
+.save .btn{
+  margin: 16rpx 32rpx;
+  height: 88rpx;
+  font-size:34rpx;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+}

@@ -1,0 +1,46 @@
+<view class="container">
+  <view class="line">
+    <text>货品编号<text style="color:red;">*</text></text>
+    <input value="{{code}}" onInput="setCode" placeholder="不输入则自动编号" disabled />
+  </view>
+  <view class="line">
+    <text>货品名称</text>
+    <input value="{{name}}" onInput="setName" placeholder="请填写货品名称" />
+  </view>
+  <view class="line">
+    <text>规格型号<text style="color:red;">*</text></text>
+    <input value="{{model}}" onInput="setModel" placeholder="请填写规格型号" />
+  </view>
+  <view class="line">
+    <text>货品类型<text style="color:red;">*</text></text>
+    <picker onChange="bindObjPickerChange1" value="{{arrIndex1}}" range="{{objectArray1}}" range-key="value">
+      <view class="picker">
+        <input value="{{objectArray1[arrIndex1].value?objectArray1[arrIndex1].value:typeStr}}" placeholder="请选择类型" disabled/>
+      </view>
+    </picker>
+    <image class="icon1" mode="scaleToFill" src="../../../images/right.png" a:if="{{!objectArray1[arrIndex1].value && !typeStr}}"/>
+    <image class="icon2" mode="scaleToFill" src="../../../images/clear.png" a:else data-id="1" onTap="clear"/>
+  </view>
+  <view class="line">
+    <text>生产商<text style="color:red;">*</text></text>
+    <picker onChange="bindObjPickerChange2" value="{{arrIndex2}}" range="{{objectArray2}}" range-key="value">
+      <view class="picker">
+        <input value="{{objectArray2[arrIndex2].value?objectArray2[arrIndex2].value:producerStr}}" placeholder="请选择生产商" disabled/>
+      </view>
+    </picker>
+    <image class="icon1" mode="scaleToFill" src="../../../images/right.png" a:if="{{!objectArray2[arrIndex2].value && !producerStr}}"/>
+    <image class="icon2" mode="scaleToFill" src="../../../images/clear.png" a:else data-id="2" onTap="clear"/>
+  </view>
+  <view class="line">
+    <text>库存预警数<text style="color:red;">*</text></text>
+    <input value="{{warning}}" onInput="setWarning" placeholder="请填写库存预警数" />
+  </view>
+  <view class="text">
+    <view>备注</view>
+    <textarea value="{{remark}}" placeholder="请填写备注" onInput="setRemark" auto-height />
+  </view>
+
+  <view class="save" a:if="{{btnVisible}}">
+    <button type="primary" class="btn" onTap="save">保存</button>
+  </view>
+</view>

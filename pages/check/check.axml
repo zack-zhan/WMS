@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="search">
+    <view class="search_box">
+      <icon type="search" class="icon" size="16"></icon>
+      <input value="{{search}}" onInput="setSearch" placeholder="单号、经办人" />
+      <image mode="scaleToFill" src="../../images/clear.png" onTap="clear" a:if="{{search}}"/>
+    </view>
+  </view>
+  
+  <view class="box" a:for="{{list}}" :key="{{item}}" data-id="{{item.id}}" onTap="look">
+    <view class="line">
+      <text>盘点单号</text>
+      <text>{{item.inventoryCode}}</text>
+    </view>
+    <view class="num">
+      <text class="{{item.countNumber > 0?'blue':''}}">已盘数量 {{item.countNumber}}</text>
+      <text class="{{item.number > 0?'green':''}}">盘盈数量 {{item.number}}</text>
+      <text class="{{item.lostNumber > 0?'red':''}}">盘亏数量 {{item.lostNumber}}</text>
+    </view>
+    <view class="time">{{item.operator}}<text>|</text>{{item.updateTime}}</view>
+  </view>
+
+  <view class="text">没有更多了</view>
+  <view class="add" a:if="{{btnVisible}}">
+    <button type="primary" class="btn">
+      <navigator url="./add-check/add-check">新增盘点</navigator>
+    </button>
+  </view>
+</view>

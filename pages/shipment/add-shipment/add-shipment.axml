@@ -1,0 +1,54 @@
+<view class="container">
+  <view class="line">
+    <text>货品名称<text style="color:red;">*</text></text>
+    <navigator url="../../product/search/search?type=2">
+      <text class="picker"><input value="{{nameStr}}" placeholder="请选择货品名称" disabled/></text>
+    </navigator>
+    <image class="icon1" mode="scaleToFill" src="../../../images/right.png" a:if="{{!name}}"/>
+    <image class="icon2" mode="scaleToFill" src="../../../images/clear.png" a:else data-id="1" onTap="clear"/>
+  </view>
+  <view class="line">
+    <text>规格型号</text>
+    <input value="{{model}}" disabled="{{true}}" placeholder="自动填写" />
+  </view>
+  <view class="line">
+    <text>出库类型<text style="color:red;">*</text></text>
+    <picker onChange="bindObjPickerChange1" value="{{arrIndex1}}" range="{{objectArray1}}" range-key="value">
+      <view class="picker">
+        <input value="{{objectArray1[arrIndex1].value}}" placeholder="请选择类型" disabled/>
+      </view>
+    </picker>
+    <image class="icon1" mode="scaleToFill" src="../../../images/right.png" a:if="{{!objectArray1[arrIndex1].value}}"/>
+    <image class="icon2" mode="scaleToFill" src="../../../images/clear.png" a:else data-id="2" onTap="clear"/>
+  </view>
+  <view class="line">
+    <text>项目名称<text style="color:red;">*</text></text>
+    <picker onChange="bindObjPickerChange2" value="{{arrIndex2}}" range="{{objectArray2}}" range-key="name">
+      <view class="picker">
+        <input value="{{objectArray2[arrIndex2].name}}" placeholder="请选择供应商" disabled/>
+      </view>
+    </picker>
+    <image class="icon1" mode="scaleToFill" src="../../../images/right.png" a:if="{{!objectArray2[arrIndex2].name}}"/>
+    <image class="icon2" mode="scaleToFill" src="../../../images/clear.png" a:else data-id="3" onTap="clear"/>
+  </view>
+  <view class="line">
+    <text>货品数量<text style="color:red;">*</text></text>
+    <input onInput="setNum" placeholder="请填写货品数量" />
+  </view>
+  <view class="line">
+    <text>总价(元)</text>
+    <input value="{{'￥' + sumPrice}}" disabled="{{true}}" placeholder="自动填写" a:if="{{sumPrice}}" />
+  </view>
+  <view class="line">
+    <text>货架编号</text>
+    <input value="{{shelfCode}}" disabled="{{true}}" placeholder="自动填写" />
+  </view>
+  <view class="text">
+    <view>备注</view>
+    <textarea onInput="setRemark" placeholder="请填写备注" auto-height />
+  </view>
+
+  <view class="save" a:if="{{btnVisible}}">
+    <button type="primary" class="btn" onTap="save">保存</button>
+  </view>
+</view>

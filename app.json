@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/supplier/supplier",
+    "pages/supplier/add-supplier/add-supplier",
+    "pages/supplier/edit-supplier/edit-supplier",
+    "pages/product/product",
+    "pages/product/add-product/add-product",
+    "pages/product/edit-product/edit-product",
+    "pages/stock/stock",
+    "pages/shipment/shipment",
+    "pages/stock/add-stock/add-stock",
+    "pages/stock/edit-stock/edit-stock",
+    "pages/shipment/add-shipment/add-shipment",
+    "pages/shipment/edit-shipment/edit-shipment",
+    "pages/setting/setting",
+    "pages/setting/type/type",
+    "pages/project/project",
+    "pages/inventory/inventory",
+    "pages/project/add-project/add-project",
+    "pages/project/edit-project/edit-project",
+    "pages/inventory/understock/understock",
+    "pages/check/check",
+    "pages/check/detail/detail",
+    "pages/check/add-check/add-check",
+    "pages/statistics/statistics",
+    "pages/statistics/detail/detail",
+    "pages/product/search/search"
+  ],
+  "tabBar": {
+    "textColor": "rgba(25,31,37,0.4)",
+    "selectedColor": "rgba(50,150,250,1)",
+    "backgroundColor": "#ffffff",
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "name": "库存",
+        "icon": "images/tabBar1.png",
+        "activeIcon": "images/tabBar1.1.png"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "name": "参数设定",
+        "icon": "images/tabBar2.png",
+        "activeIcon": "images/tabBar2.2.png"
+      }
+    ]
+  },
+  "window": {
+    "defaultTitle": "库存管理"
+  }
+}

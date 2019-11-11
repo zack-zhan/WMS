@@ -1,0 +1,45 @@
+<view class="container">
+  <view class="title">请选择统计分类</view>
+  <navigator url="./detail/detail?id=1">
+    <view class="line">
+      <text class="dot"></text>
+      <text class="text">货品统计</text>
+      <image class="icon" mode="scaleToFill" src="../../../images/right.png"/>
+    </view>
+  </navigator>
+  <navigator url="./detail/detail?id=2">
+    <view class="line">
+    <text class="dot"></text>
+    <text class="text">库存统计</text>
+    <image class="icon" mode="scaleToFill" src="../../../images/right.png"/>
+  </view>
+  </navigator>
+  <navigator url="./detail/detail?id=3">
+    <view class="line">
+      <text class="dot"></text>
+      <text class="text">入库统计</text>
+      <image class="icon" mode="scaleToFill" src="../../../images/right.png"/>
+    </view>
+  </navigator>
+  <navigator url="./detail/detail?id=4">
+    <view class="line">
+      <text class="dot"></text>
+      <text class="text">出库统计</text>
+      <image class="icon" mode="scaleToFill" src="../../../images/right.png"/>
+    </view>
+  </navigator>
+  <navigator url="./detail/detail?id=5">
+    <view class="line">
+      <text class="dot red"></text>
+      <text class="text">供应商统计</text>
+      <image class="icon" mode="scaleToFill" src="../../../images/right.png"/>
+    </view>
+  </navigator>
+  <navigator url="./detail/detail?id=6">
+    <view class="line">
+      <text class="dot yellow"></text>
+      <text class="text">客户统计</text>
+      <image class="icon" mode="scaleToFill" src="../../../images/right.png"/>
+    </view>
+  </navigator>  
+</view>

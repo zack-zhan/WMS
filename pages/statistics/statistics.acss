@@ -1,0 +1,49 @@
+.container{
+  width: 100%;
+  min-height: 100vh;
+  background: #f3f4f6;
+  overflow: hidden;
+}
+
+.title{
+  padding: 24rpx 32rpx;
+  font-size:26rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(25,31,37,0.56);
+}
+.line{
+  height: 116rpx;
+  line-height: 116rpx;
+  background: #fff;
+  padding: 0 32rpx;
+  position: relative;
+  margin-bottom: 28rpx;
+}
+.dot{
+  display: inline-block;
+  width:6px;
+  height:6px;
+  background:rgba(56,173,255,1);
+  border-radius: 100%;
+}
+.red{
+  background:rgba(242,86,67,1);
+}
+.yellow{
+  background:rgba(245,166,35,1);
+}
+.line .text{
+  margin-left: 20rpx;
+  font-size:32rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(25,31,37,1);
+}
+.line image{
+  width: 18rpx;
+  height: 28rpx;
+  position: absolute;
+  top: 42rpx;
+  right: 32rpx;
+}

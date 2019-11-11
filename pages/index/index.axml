@@ -1,0 +1,72 @@
+<view class="container">
+  <view class="bg">
+    <view class="round">
+      <view>今日入库</view>
+      <view>{{arr.inputCount}}<text class="ts">笔</text></view>
+    </view>
+    <view class="round">
+      <view>今日出库</view>
+      <view>{{arr.outputCount}}<text class="ts">笔</text></view>
+    </view>
+  </view>
+
+  <view class="line">
+    <view>货品种类：{{list.countKinds}}</view>
+    <view>库存总数：{{list.total}}</view>
+  </view>
+  <view class="line">
+    <view>库存不足：<text class="red" onTap="warn">{{list.warning}}</text></view>
+  </view>
+
+  <view class="toolbar">
+    <view class="title">工具栏</view>
+    <view class="box">
+      <navigator url="../product/product">
+        <image mode="scaleToFill" src="../../images/tool1.png"/>
+        <view>新增货品</view>
+      </navigator>
+    </view>
+    <view class="box">
+      <navigator url="../stock/stock">
+        <image mode="scaleToFill" src="../../images/tool2.png"/>
+        <view>入库管理</view>
+      </navigator>
+    </view>
+    <view class="box">
+      <navigator url="../shipment/shipment">
+        <image mode="scaleToFill" src="../../images/tool3.png"/>
+        <view>出库管理</view>
+      </navigator>
+    </view>
+    <view class="box">
+      <navigator url="../supplier/supplier">
+        <image mode="scaleToFill" src="../../images/tool4.png"/>
+        <view>供应商管理</view>
+      </navigator>
+    </view>
+    <view class="box">
+      <navigator url="../project/project">
+        <image mode="scaleToFill" src="../../images/tool5.png"/>
+        <view>项目管理</view>
+      </navigator>
+    </view>
+    <view class="box">
+      <navigator url="../inventory/inventory">
+        <image mode="scaleToFill" src="../../images/tool6.png"/>
+        <view>库存管理</view>
+      </navigator>
+    </view>
+    <view class="box">
+      <navigator url="../check/check">
+        <image mode="scaleToFill" src="../../images/tool7.png"/>
+        <view>盘点管理</view>
+      </navigator>
+    </view>
+    <view class="box">
+      <navigator url="../statistics/statistics">
+        <image mode="scaleToFill" src="../../images/tool8.png"/>
+        <view>分析统计</view>
+      </navigator>
+    </view>
+  </view>
+</view>

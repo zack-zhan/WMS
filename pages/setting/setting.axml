@@ -1,0 +1,45 @@
+<view class="container">
+  <view class="title">请选择参数</view>
+  <navigator url="./type/type?type=1">
+    <view class="line">
+      <text class="dot"></text>
+      <text class="text">入库类型</text>
+      <image class="icon" mode="scaleToFill" src="../../../images/right.png"/>
+    </view>
+  </navigator>
+  <navigator url="./type/type?type=2">
+    <view class="line">
+    <text class="dot"></text>
+    <text class="text">出库类型</text>
+    <image class="icon" mode="scaleToFill" src="../../../images/right.png"/>
+  </view>
+  </navigator>
+  <navigator url="./type/type?type=3">
+    <view class="line">
+    <text class="dot red"></text>
+    <text class="text">供应商类型</text>
+    <image class="icon" mode="scaleToFill" src="../../../images/right.png"/>
+  </view>
+  </navigator>
+  <navigator url="./type/type?type=4">
+    <view class="line">
+      <text class="dot yellow"></text>
+      <text class="text">客户类型</text>
+      <image class="icon" mode="scaleToFill" src="../../../images/right.png"/>
+    </view>
+  </navigator>
+  <navigator url="./type/type?type=0">
+    <view class="line">
+      <text class="dot"></text>
+      <text class="text">货品类型</text>
+      <image class="icon" mode="scaleToFill" src="../../../images/right.png"/>
+    </view>
+  </navigator>
+  <navigator url="./type/type?type=5">
+    <view class="line">
+      <text class="dot green"></text>
+      <text class="text">生产商名称</text>
+      <image class="icon" mode="scaleToFill" src="../../../images/right.png"/>
+    </view>
+  </navigator>  
+</view>

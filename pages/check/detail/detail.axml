@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="titlebar">
+    <text>共盘点 {{list.length}} 个</text>
+  </view>
+  
+  <view class="box" a:for="{{list}}" :key="{{item}}">
+    <view class="left">
+      <view>
+        <text>货品名称</text>
+        <text>{{item.goodsName}}</text>
+      </view>
+      <view>
+        <text>货品编码</text>
+        <text>{{item.goodsCode}}</text>
+      </view>
+      <view>
+        <text>库存数量</text>
+        <text>{{item.inventory}}</text>
+      </view>
+    </view>
+    <view class="right">
+      <view>
+        <text>偏差数量：<text  class="{{item.deviationInventory > 0?'green':item.deviationInventory < 0?'red':''}}">{{item.deviationInventory}}</text></text>
+      </view>
+    </view>
+  </view>
+</view>

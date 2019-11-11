@@ -1,0 +1,78 @@
+<view class="container">
+  <block a:if="{{show}}">
+    <view class="line">
+      <text>货品类型</text>
+      <picker onChange="bindObjPickerChange" value="{{arrIndex}}" range="{{objectArray}}" range-key="value">
+        <view class="picker">
+          <input value="{{objectArray[arrIndex].value}}" placeholder="请选择类型" disabled/>
+          <image class="icon" mode="scaleToFill" src="../../../images/right.png"/>
+        </view>
+      </picker>
+    </view>
+  </block>
+
+  <block a:else>
+    <view class="search">
+      <view class="search_box">
+        <icon type="search" class="icon" size="16"></icon>
+        <input value="{{search}}" onInput="setSearch" placeholder="编号、名称" />
+        <image mode="scaleToFill" src="../../../images/clear.png" onTap="clear" a:if="{{search}}"/>
+      </view>
+    </view>
+    <view class="titlebar">
+      <text>共盘点 {{list.length}} 个/已选 {{selectArr.length}} 个</text>
+    </view>
+    <view a:for="{{list}}" :key="{{item}}" class="{{item.num && item.num !== 0?'bg':'box'}}">
+      <view class="left">
+        <view>
+          <text>货品名称</text>
+          <text>{{item.goodsName}}</text>
+        </view>
+        <view>
+          <text>货品编码</text>
+          <text>{{item.goodsCode}}</text>
+        </view>
+        <view>
+          <text>库存数量</text>
+          <text>{{item.inventory}}</text>
+        </view>
+      </view>
+      <view class="right">
+        <view>
+          <text>偏差数量：<text class="{{item.offset > 0?'textGreen':item.offset < 0?'textRed':''}}">{{item.offset}}</text></text>
+        </view>
+        <view>
+          <text data-index="{{index}}" onTap="subtract">-</text>
+          <text><input value="{{item.num}}" data-index="{{index}}" onInput="setNum" type="number" /></text>
+          <text data-index="{{index}}" onTap="add">+</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="text">没有更多了</view>
+    <view class="add" a:if="{{btnVisible}}">
+      <button type="primary" class="btn" onTap="accomplish">添加完成</button>
+    </view>
+    <block a:if="{{visible}}">
+      <view class="shade">
+        <view class="shade_box">
+          <view class="content">
+            <view>
+              <text>货品类型</text>
+              <text>{{typeStr}}</text>
+            </view>
+            <view>
+              <text class="blue">已盘数量 {{selectArr.length}}</text>
+              <text class="green">盘盈数量 {{more}}</text>
+              <text class="red">盘亏数量 {{few}}</text>
+            </view>
+          </view>
+          <view class="footer">
+            <button type="default" class="btn" onTap="cancel">继续添加</button>
+            <button type="primary" class="btn" onTap="submit">提交</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,80 @@
+<view class="container">
+  <view class="search">
+    <view class="search_box">
+      <icon type="search" class="icon" size="16"></icon>
+      <input value="{{search}}" onInput="setSearch" placeholder="单号、名称、型号" />
+      <image mode="scaleToFill" src="../../images/clear.png" onTap="clear" a:if="{{search}}"/>
+    </view>
+  </view>
+  
+  <view 
+    class="box"
+    a:for="{{list}}"
+    :key="{{item}}"
+    data-index="{{index}}"
+    onTouchStart="start"
+    onTouchMove="move"
+    onTap="unfold"
+  >
+    <view class="list">
+      <text a:if="{{!item.visible}}">
+        <image mode="scaleToFill" src="../../images/down.png"/>
+      </text>
+      <text a:else>
+        <image mode="scaleToFill" src="../../images/up.png"/>
+      </text>
+    </view>
+    <view class="line">
+      <text>入库单号</text>
+      <text>{{item.inputCode}}</text>
+    </view>
+    <view class="line">
+      <text>货品名称</text>
+      <text>{{item.goodsName}}</text>
+    </view>
+    <view class="line">
+      <text>规格型号</text>
+      <text>{{item.specificationType}}</text>
+    </view>
+    <view class="line">
+      <text>入库数量</text>
+      <text>{{item.number}}</text>
+    </view>
+    <block a:if="{{item.visible}}">
+      <view class="line">
+        <text>货架编号</text>
+        <text>{{details.shelfCode}}</text>
+      </view>
+      <view class="line">
+        <text>单价(元)</text>
+        <text>￥{{details.price}}</text>
+      </view>
+      <view class="line">
+        <text>总价(元)</text>
+        <text>￥{{details.sumPrice}}</text>
+      </view>
+      <view class="line">
+        <text>供应商</text>
+        <text>{{details.supplierName}}</text>
+      </view>
+      <view class="line">
+        <text>备注</text>
+        <text>{{details.remarks}}</text>
+        <image mode="scaleToFill" src="../../images/copy.png" catchTap="copy" a:if="{{details.remarks}}"/>
+      </view>
+    </block>
+    
+    <view class="time">{{item.operator}}<text>|</text>{{item.updateTime}}</view>
+    <!-- <view class="operation" a:if="{{index === operation}}">
+      <text data-id="{{item.id}}" onTap="edit">编辑</text>
+      <text data-id="{{item.id}}" onTap="del">删除</text>
+    </view> -->
+  </view>
+
+  <view class="text">没有更多了</view>
+  <view class="add" a:if="{{btnVisible}}">
+    <button type="primary" class="btn">
+      <navigator url="./add-stock/add-stock">新增入库</navigator>
+    </button>
+  </view>
+</view>

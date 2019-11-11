@@ -1,0 +1,80 @@
+.container{
+  width: 100%;
+  min-height: 100vh;
+  background: #f3f4f6;
+}
+
+.search{
+  padding: 16rpx 32rpx;
+  border-bottom: 1px solid rgba(25,31,37,0.12);
+  box-sizing: border-box;
+  background: #fff;
+}
+.search_box{
+  height: 72rpx;
+  background:#EDEDEE;
+  border-radius:18px;
+  position: relative;
+}
+.search_box .icon{
+  position: absolute;
+  top: 20rpx;
+  left: 24rpx;
+}
+.search_box input{
+  width: 542rpx;
+  height: 40rpx;
+  margin-top: 16rpx;
+  background:#EDEDEE;
+  font-size:30rpx;
+  font-family:PingFangSC-Regular,PingFangSC;
+  font-weight:400;
+  margin-left: 72rpx;
+  padding: 0;
+}
+.search_box image{
+  width: 28rpx;
+  height: 28rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 24rpx;
+}
+
+.line{
+  height: 80rpx;
+  line-height: 78rpx; 
+  background: #fff;
+}
+.line view{
+  margin-left: 32rpx;
+  border-bottom: 1px solid rgba(25,31,37,0.08);
+  position: relative;
+}
+.line text{
+  font-size:32rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(25,31,37,1);
+}
+.line image{
+  width: 28rpx;
+  height: 28rpx;
+  position: absolute;
+  right: 32rpx;
+  top: 22rpx;
+}
+
+.add{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+}
+.add .btn{
+  margin: 16rpx 32rpx;
+  height: 88rpx;
+  font-size:34rpx;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+}

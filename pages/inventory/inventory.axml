@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="search">
+    <view class="search_box">
+      <icon type="search" class="icon" size="16"></icon>
+      <input value="{{search}}" onInput="setSearch" placeholder="编号、名称、型号" />
+      <image mode="scaleToFill" src="../../images/clear.png" onTap="clear" a:if="{{search}}"/>
+    </view>
+  </view>
+
+  <view class="titlebar">
+    <text>库存总数：{{arr.total}}</text>
+    <text>库存预警：<text style="color:#F25643" onTap="warn">{{arr.warning}}</text></text>
+  </view>
+  
+  <view class="box" a:for="{{list}}" :key="{{item}}">
+    <view class="line">
+      <text>货品名称</text>
+      <text>{{item.name}}</text>
+    </view>
+    <view class="line">
+      <text>货品编号</text>
+      <text>{{item.goodsCode}}</text>
+    </view>
+    <view class="line">
+      <text>规格型号</text>
+      <text>{{item.specificationType}}</text>
+    </view>
+    <view class="line">
+      <text>库存数量</text>
+      <text>{{item.inventory}}</text>
+    </view>
+  </view>
+
+  <view class="text">没有更多了</view>
+</view>

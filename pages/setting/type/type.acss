@@ -1,0 +1,76 @@
+.container{
+  width: 100%;
+  min-height: 100vh;
+  background: #f3f4f6;
+  overflow: hidden;
+}
+
+.title{
+  margin: 24rpx 32rpx;
+  font-size:26rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(25,31,37,0.56);
+  overflow: hidden;
+}
+.title text{
+  float: right;
+  font-size:30rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(50,150,250,1);
+}
+.line{
+  height: 116rpx;
+  line-height: 116rpx;
+  background: #fff;
+  padding: 0 32rpx;
+  position: relative;
+  margin-top: 24rpx;
+}
+.line text{
+  font-size:32rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(25,31,37,1);
+}
+.line image{
+  width: 28rpx;
+  height: 28rpx;
+  position: absolute;
+  top: 42rpx;
+  right: 32rpx;
+}
+.line input{
+  width: 500rpx;
+  position: absolute;
+  top: 28rpx;
+  left: 160rpx;
+}
+.add{
+  height:84rpx;
+  line-height: 84rpx;
+  background:rgba(255,255,255,1);
+  text-align: center;
+  font-size:32rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(50,150,250,1);
+  border-top: 1px solid rgba(25,31,37,0.12);
+  margin-bottom: 200rpx;
+}
+
+.save{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+}
+.save .btn{
+  margin: 16rpx 32rpx;
+  height: 88rpx;
+  font-size:34rpx;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+}
